@@ -4,8 +4,7 @@ require_once '../dao/UsuarioDao.class.php';
 require_once '../class/FabricaDeConexao.class.php';
 
 
-if(!empty($_POST["usuario"])&&!empty($_POST["senha"])&&!empty($_POST["cpf
-"])&& !empty($_POST["sobrenome"])&&!empty($_POST["email"])&&!empty($_POST["data_nascimento"])&&!empty($_POST["cep"])&&!empty($_POST["endereco"])&&!empty($_POST["bairro"])&&!empty($_POST["cidade"])&&!empty($_POST["uf"])&&!empty($_POST["pais"])&&!empty($_POST["telefone_fixo"])&&!empty($_POST["telefone_movel"]))
+if(!empty($_POST["usuario"])&&!empty($_POST["senha"])&&!empty($_POST["cpf"])&& !empty($_POST["sobrenome"])&&!empty($_POST["email"])&&!empty($_POST["data_nascimento"])&&!empty($_POST["cep"])&&!empty($_POST["endereco"])&&!empty($_POST["bairro"])&&!empty($_POST["cidade"])&&!empty($_POST["uf"])&&!empty($_POST["pais"])&&!empty($_POST["telefone_fixo"])&&!empty($_POST["telefone_movel"]))
 {
 	 $usuario = new Usuario();
 	  $usuario->nome = $_POST["nome"];

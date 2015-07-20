@@ -27,6 +27,8 @@ class Usuario extends UsuarioDao
     	$this->$campo = $valor;
     	
     }   
+    
+   
 
 }
 ?>

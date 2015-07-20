@@ -4,7 +4,7 @@ require_once '../dao/UsuarioDao.class.php';
 require_once '../class/FabricaDeConexao.class.php';
 
 
-if(!empty($_POST))
+if(!empty($_POST["usuario"]))
 {
 	 $usuario = new Usuario();
 	  $usuario->nome = $_POST["nome"];
@@ -23,7 +23,8 @@ if(!empty($_POST))
 	  $usuario->telefone_fixo = $_POST["telefone_fixo"];
 	  $usuario->telefone_movel= $_POST["telefone_movel"];
 	  
-	  $usuario-adicionar($usuario);
+	 $db = new UsuarioDao();
+	 $db->adicionar($usuario);
 	  
 	  
 	  
@@ -33,6 +34,10 @@ if(!empty($_POST))
 	  
 	  
 	  
+}
+else
+{
+	echo "usuario esta vazio!";
 }
 
  

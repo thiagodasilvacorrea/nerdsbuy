@@ -10,8 +10,8 @@ class FabricaDeConexao
 	# Informações sobre o banco de dados:
 	$db_host = "127.0.0.1";
 	$db_nome = "nerdsbuy_db";
-	$db_usuario = "";
-	$db_senha = "";
+	$db_usuario = "nerds";
+	$db_senha = "nerds123";
 	$db_driver = "mysql";
 
 	try

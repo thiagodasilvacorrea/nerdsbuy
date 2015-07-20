@@ -6,29 +6,29 @@ class UsuarioDao extends FabricaDeConexao
 
 { 
 	//adiciona todos os dados do usuario.
-    public function adicionar(Usuario $dados)
+    public function adicionar($dados)
     {
     	try {
 		    	
-    			FabricaDeConexao::conexao();
+    		$con =	FabricaDeConexao::conexao();
     			
-		    	$sqlquery = 'insert into usuario(usuario,senha,nome,sobrenome,cpf,data_nascimento,email,cep,endereco,bairro,cidade,uf,pais,telefone_fixo,telefone,movel)values(?,md5(?),?,?,?,?,?,?,?,?,?,?,?,?,?)';
-		    	$stmt->$con-> prepare($sqlquery);
-		    	$stmt->bindValue(1,$dados->usuario);
-		    	$stmt->bindValue(2,$dados->senha);
-		    	$stmt->bindValue(3,$dados->nome);
-		    	$stmt->bindValue(4,$dados->sobrenome);
-		    	$stmt->bindValue(5,$dados->cpf);
-		    	$stmt->bindValue(6,$dados->data_nascimento);
-		    	$stmt->bindValue(7,$dados->email);
-		    	$stmt->bindValue(8,$dados->cep);
-		    	$stmt->bindValue(9,$dados->endereco);
-		    	$stmt->bindValue(10,$dados->bairro);
-		    	$stmt->bindValue(11,$dados->cidade);
-		    	$stmt->bindValue(12,$dados->uf);
-		    	$stmt->bindValue(13,$dados->pais);
-		    	$stmt->bindValue(14,$dados->telefone_fixo);
-		    	$stmt->bindValue(15,$dados->telefone_movel);
+		    	$sqlquery = 'insert into usuario(usuario,senha,nome,sobrenome,cpf,data_nascimento,email,cep,endereco,bairro,cidade,uf,pais,telefone_fixo,telefone_movel)values(:usuario,md5(:senha),:nome,:sobrenome,:cpf,:data_nascimento,:email,:cep,:endereco,:bairro,:cidade,:uf,:pais,:telefone_fixo,:telefone_movel);';
+		    	$stmt =$con-> prepare($sqlquery);
+		    	$stmt->bindValue(':usuario',$dados->usuario);
+		    	$stmt->bindValue(':senha',$dados->senha);
+		    	$stmt->bindValue(':nome',$dados->nome);
+		    	$stmt->bindValue(':sobrenome',$dados->sobrenome);
+		    	$stmt->bindValue(':cpf',$dados->cpf);
+		    	$stmt->bindValue(':data_nascimento',$dados->data_nascimento);
+		    	$stmt->bindValue(':email',$dados->email);
+		    	$stmt->bindValue(':cep',$dados->cep);
+		    	$stmt->bindValue(':endereco',$dados->endereco);
+		    	$stmt->bindValue(':bairro',$dados->bairro);
+		    	$stmt->bindValue(':cidade',$dados->cidade);
+		    	$stmt->bindValue(':uf',$dados->uf);
+		    	$stmt->bindValue(':pais',$dados->pais);
+		    	$stmt->bindValue(':telefone_fixo',$dados->telefone_fixo);
+		    	$stmt->bindValue(':telefone_movel',$dados->telefone_movel);
 		    	
 		    	$stmt->execute();
 		    	 	

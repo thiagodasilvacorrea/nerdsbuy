@@ -10,24 +10,24 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Copiando estrutura do banco de dados para nerdesbuy_db
-CREATE DATABASE IF NOT EXISTS `nerdesbuy_db` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
-USE `nerdesbuy_db`;
+-- Copiando estrutura do banco de dados para nerdsbuy_db
+CREATE DATABASE IF NOT EXISTS `nerdsbuy_db` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+USE `nerdsbuy_db`;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.categoria
+-- Copiando estrutura para tabela nerdsbuy_db.categoria
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nome` int(10) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.categoria: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.categoria: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.item_pedido
+-- Copiando estrutura para tabela nerdsbuy_db.item_pedido
 CREATE TABLE IF NOT EXISTS `item_pedido` (
   `id_item_de_pedido` int(10) NOT NULL AUTO_INCREMENT,
   `id_pedido` int(10) NOT NULL,
@@ -41,24 +41,24 @@ CREATE TABLE IF NOT EXISTS `item_pedido` (
   CONSTRAINT `produto_item_pedido_fk` FOREIGN KEY (`id_produto`) REFERENCES `produto` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.item_pedido: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.item_pedido: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `item_pedido` DISABLE KEYS */;
 /*!40000 ALTER TABLE `item_pedido` ENABLE KEYS */;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.marca
+-- Copiando estrutura para tabela nerdsbuy_db.marca
 CREATE TABLE IF NOT EXISTS `marca` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nome` int(10) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.marca: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.marca: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.pedido
+-- Copiando estrutura para tabela nerdsbuy_db.pedido
 CREATE TABLE IF NOT EXISTS `pedido` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `codigo_cliente` int(11) DEFAULT '0',
@@ -71,12 +71,12 @@ CREATE TABLE IF NOT EXISTS `pedido` (
   CONSTRAINT `codigo_cliente_pedido_fk` FOREIGN KEY (`codigo_cliente`) REFERENCES `usuario` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.pedido: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.pedido: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.produto
+-- Copiando estrutura para tabela nerdsbuy_db.produto
 CREATE TABLE IF NOT EXISTS `produto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `codigo` varchar(30) CHARACTER SET utf8 DEFAULT NULL,
@@ -93,12 +93,12 @@ CREATE TABLE IF NOT EXISTS `produto` (
   CONSTRAINT `marca_produto_fk` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.produto: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.produto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 
 
--- Copiando estrutura para tabela nerdesbuy_db.usuario
+-- Copiando estrutura para tabela nerdsbuy_db.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(30) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela nerdesbuy_db.usuario: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela nerdsbuy_db.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

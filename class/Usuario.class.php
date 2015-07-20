@@ -5,6 +5,7 @@ class Usuario extends UsuarioDao
 	private $id = null;
 	private $nome= null;
 	private $sobrenome = null;
+    private $cpf = null;
 	private $senha = null;
 	private $email = null;
 	private $usuario = null;

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tempo de Geração: 21/07/2015 às 10:41
+-- Tempo de Geração: 21/07/2015 às 11:00
 -- Versão do servidor: 5.5.43-0ubuntu0.14.04.1
 -- Versão do PHP: 5.5.9-1ubuntu4.9
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `item_pedido` (
 
 CREATE TABLE IF NOT EXISTS `marca` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `nome` int(10) DEFAULT '0',
+  `nome` varchar(30) COLLATE utf8_unicode_ci DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 

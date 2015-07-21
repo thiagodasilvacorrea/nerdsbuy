@@ -15,7 +15,6 @@ class Usuario extends UsuarioDao
 	private $bairro = null;
 	private $cidade = null;
 	private $uf = null;
-	private $pais = null;
 	private $telefone_fixo =null;
 	private $telefone_movel = null;
 
